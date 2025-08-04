@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+:root {
+  --bg: #f9fafb;
+  --text: #2e2e2e;
+  --menus: #7b7b7b;
+  --btn-pri: #4a90e2;
+  --hover: #1a56d1;
+  --btn-sec: #22c55e;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  font-family: "Inter", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#particles-js {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, #c9d6ff, #e2e2e2, #dbe7f9, #b5c6e0);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+}
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: transparent;
+  z-index: 20;
+  padding: 0.5rem 0;
+  background: rgba(255, 255, 255, 0.064);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.326);
+  z-index: 50;
+}
+header img {
+  width: 88px;
+  height: auto;
+  margin-left: 32px;
+  animation: logo 2.5s ease-in-out infinite;
+  position: relative;
+}
+@keyframes logo {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.035);
+  }
+}
+header img:hover {
+  cursor: pointer;
+  transform: scale(1.06);
+  transition: 0.9s ease;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
+header nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+header nav a:hover {
+  color: var(--hover);
+  transform: scale(1.1);
+  font-weight: 600;
+  position: relative;
+}
+header nav a:hover:after {
+  content: "";
+  background: linear-gradient(to right, #0150ce, #54a4dd);
+  width: 90%;
+  height: 2px;
+  position: absolute;
+  left: 2.5px;
+  bottom: -10px;
+}
+.orcamento {
+  background: linear-gradient(to right, #0061ff, #549fdd);
+  box-shadow: none;
+  color: var(--bg);
+  font-family: "Inter", sans-serif;
+  width: 220px;
+  height: 40px;
+  font-weight: 800;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px) scale(1);
+}
+.orcamento.apareceu {
+  animation: tela 1s ease forwards;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.orcamento::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.2)
+  );
+  transform: skewX(-20deg);
+  transition: all 0.5s ease;
+  z-index: 0;
+}
+.orcamento:hover::before {
+  left: 100%;
+}
+.orcamento:hover {
+  color: white;
+}
+.orcamento span,
+.orcamento {
+  position: relative;
+  z-index: 1;
+}
+.orcamento:hover {
+  cursor: pointer;
+  transform: translateY(0) scale(1.5);
+  background: linear-gradient(to right, #0044cc, #278ccf);
+}
+#typed-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 52px;
+  letter-spacing: 0.06em;
+  animation: logo 5s ease-in-out infinite;
+  background: linear-gradient(
+    135deg,
+    var(--text),
+    var(--text),
+    #a4a4a4,
+    var(--text),
+    var(--text)
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineLoop 15s linear infinite;
+}
+#typed-title span {
+  background: linear-gradient(
+    135deg,
+    var(--btn-pri),
+    var(--btn-pri),
+    var(--hover),
+    var(--btn-pri),
+    var(--btn-pri)
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineLoop 15s linear infinite;
+}
+
+@keyframes shineLoop {
+  0% {
+    background-position: -200% -200%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  max-width: 550px;
+  margin-top: 15px;
+}
+.textColor {
+  background: #4a90e2;
+}
+.home {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 8rem 3rem;
+  background: url("/imgs/homefundo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  overflow: hidden;
+}
+.text {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.flecha {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+}
+.flecha img {
+  animation: seta 2s ease-in-out infinite;
+}
+.flecha img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.2s ease;
+}
+@keyframes seta {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

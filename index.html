@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuvora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="stylesheet" href="styles/style2.css"/>
+    <link rel="stylesheet" href="styles/style3.css"/>
+    <link rel="stylesheet" href="styles/style4.css"/>
+    <link rel="stylesheet" href="styles/style5.css"/>
+    <link rel="stylesheet" href="styles/style6.css"/>
+    <link rel="stylesheet" href="styles/style7.css"/>
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <header>
+      <img onclick="voltarhome()" id="logo"src="imgs/logo nuvora.png" alt="NUVORA" />
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#servico">Serviço</a>
+        <a href="#sobrenos">Sobre nós</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <button onclick="irformulario()" class="orcamento">
+        Solicitar orçamento
+      </button>
+    </header>
+    <main>
+      <div class="home" id="home">
+        <div class="text">
+          <div>
+            <h1 id="typed-title"></h1>
+            <h3 id="typed-subtitle"></h3>
+          </div>
+          <button onclick="irformulario()" class="orcamento">
+            Solicitar orçamento -->
+          </button>
+        </div>
+        <div class="flecha">
+          <img onclick="irservico()" src="imgs/setadown.png" alt="Seta" />
+        </div>
+      </div>
+      <div class="servico" id="servico">
+        <br />
+        <br />
+        <br />
+        <br />
+        <h2 class="titulo-servico">O que oferecemos</h2>
+        <div class="cards">
+          <div onclick="irformulario()" class="box">
+            <div class="center">
+              <img class="site" src="imgs/padrao.png" alt="📄" />
+            </div>
+            <div>
+              <h5>Site Padrão</h5>
+              <h4 class="preco">R$34,99 <span>/ por mês</span></h4>
+            </div>
+            <div class="lista">
+              <p>
+                <img class="confere" src="imgs/confere.png" alt="✅" /> Landing
+                page com design personalizado
+              </p>
+              <p>
+                <img class="confere" src="imgs/confere.png" alt="✅" /> Domínio
+                incluso
+              </p>
+              <p>
+                <img class="confere" src="imgs/confere.png" alt="✅" />
+                Formulário de contato
+              </p>
+              <p>
+                <img class="confere" src="imgs/confere.png" alt="✅" />
+                Integração com WhatsApp
+              </p>
+              <p>
+                <img class="confere" src="imgs/confere.png" alt="✅" />
+                Otimização mobile
+              </p>
+              <p>
+                <img class="confere" src="imgs/confere.png" alt="✅" />
+                Certificado SSL
+              </p>
+            </div>
+            <div class="obs">
+              <h6>Obs: Valor inicial discutido após orçamento.</h6>
+            </div>
+          </div>
+          <div onclick="irformulario()" class="box">
+            <div class="selo">
+              <img width="24" height="24" src="imgs/selo.png" alt="🎖️" />
+              <p>Mais popular</p>
+            </div>
+            <div class="center">
+              <img class="site" src="imgs/busines.png" alt="📄" />
+            </div>
+            <div>
+              <h5>Site Business</h5>
+              <h4 class="preco">R$39,99 <span>/ por mês</span></h4>
+            </div>
+            <div class="lista">
+              <p>
+                <img class="confere" src="imgs/confere.png" alt="✅" /> Tudo do
+                plano Padrâo
+              </p>
+              <p>
+                <img class="confere" src="imgs/confere.png" alt="✅" />
+                Integração com anúncios
+              </p>
+              <p>
+                <img class="confere" src="imgs/confere.png" alt="✅" />
+                Performance superior
+              </p>
+              <p>
+                <img class="confere" src="imgs/confere.png" alt="✅" /> Backups
+                diários
+              </p>
+              <p>
+                <img class="confere" src="imgs/confere.png" alt="✅" /> Pixel
+                Meta/Google
+              </p>
+              <p>
+                <img class="confere" src="imgs/confere.png" alt="✅" />
+                SEO básico
+              </p>
+            </div>
+            <br />
+            <div class="obs">
+              <h6>Obs: Valor inicial discutido após orçamento.</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sobrenos" id="sobrenos">
+        <h1 class="sobre">
+          Você já viu um site que vende sozinho? <span>A gente cria.</span>
+        </h1>
+        <div class="container">
+          <div class="item">
+            <img src="imgs/iconBrain.png" alt="🧠" />
+            <br />
+            <h4 class="evolution">Ideia inicial</h4>
+            <p>"Começamos em uma madrugada com café e código."</p>
+          </div>
+          <div class="item">
+            <img src="imgs/iconFoguete.png" alt="🚀" />
+            <br />
+            <h4 class="evolution">Primeiros clientes</h4>
+            <p>"Pequenos negócios, grandes resultados."</p>
+          </div>
+          <div class="item">
+            <img src="imgs/iconPuzzle.png" alt="🧩" />
+            <br />
+            <h4 class="evolution">Primeira entrega</h4>
+            <p>“Entregamos um site simples, mas com alma de gigante.”</p>
+          </div>
+          <div class="item">
+            <img src="imgs/iconGrafico.png" alt="📈" />
+            <br />
+            <h4 class="evolution">Hoje</h4>
+            <p>“Somos uma ponte entre ideias e resultados.”</p>
+          </div>
+        </div>
+        <div class="qmsomos">
+          <div class="textoqm">
+            <h2 class="qm">
+              Quem somos<br />
+              em 3 palavras
+            </h2>
+          </div>
+          <div class="palavras">
+            <div class="word">
+              <img src="imgs/iconPaleta.png" alt="🎨" />Criativos
+            </div>
+            <div class="word">
+              <img src="imgs/iconCerebro.png" alt="🧠" />Precisos
+            </div>
+            <div class="word">
+              <img src="imgs/iconRaio.png" alt="⚡" />Rápidos
+            </div>
+          </div>
+        </div>
+        <div class="fluido">
+          <h1 class="fluidtext">
+            Você quer um site bonito ou um site que vende?
+          </h1>
+          <h1 class="fluidtextspan">A gente faz os dois.</h1>
+        </div>
+      </div>
+      <div class="contato" id="contato">
+        <div class="formulario">
+          <div class="blocochamada">
+            <h2 class="textchamativo">Vamos conversar?</h2>
+            <h3 class="subtitle">
+              Quer tirar dúvidas ou começar seu projeto? Estamos aqui.
+            </h3>
+          </div>
+          <div class="formu">
+            <form id="formulario">
+              <input class="input" type="text" name="nome" placeholder=" Nome completo" required/>
+              <input class="input" type="email" name="email" placeholder=" E-mail" required/>
+              <input class="input" type="tel" name="telefone" placeholder="+55 (11) Telefone" required/>
+              <input class="inputext" type="text" name="mensagem"placeholder=" Mensagem"required />
+              <input class="input" type="text" name="orcamento" placeholder=" Orçamento estimado"required />
+              <div class="selectbutton">
+                <select name="plano" class="options" required>
+                  <option value="" disabled selected>Escolha um plano</option>
+                  <option value="padrao">Site Padrão</option>
+                  <option value="business">Site Business</option>
+                </select>
+                <button class="enviar" type="submit" >
+                  Enviar
+                </button>
+              </div>
+            </form>
+            <div class="imgforms">
+              <img
+                class="formsimg"
+                src="imgs/forms.png"
+                alt="ImagemFormulário"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="ap">
+          <div class="apps">
+            <div>
+              <img class="cellimg" src="imgs/cell.png" alt="ImagemContato" />
+            </div>
+            <div class="appmsg">
+              <div class="msgs">
+                <img src="imgs/iconEmail.png" alt="Email" /><a
+                  href="mailto:nuvora.suporte@gmail.com"
+                  target="about_"
+                  >Mandar e-mail</a
+                >
+              </div>
+              <div class="msgs">
+                <img src="imgs/iconWhats.png" alt="WhatsApp" /><a
+                  href="https://wa.me/5547984990311?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento!"
+                  target="about_"
+                  >Falar no WhatsApp</a
+                >
+              </div>
+              <div class="msgs">
+                <img src="imgs/iconInstagram.png" alt="Instagram" />Ver
+                Instagram
+              </div>
+              <div class="msgs">
+                <img src="imgs/iconLocal.png" alt="Local" />Atendimento em todo
+                o Brasil
+              </div>
+              <div class="porcentagem">
+                <h2 class="porcen">100%</h2>
+              </div>
+              <div class="comprome">
+                <h2 class="textcompro">comprometimento com cada cliente.</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <section>
+        <div class="esquerda">
+          <img onclick="voltarhome()" src="imgs/logo nuvora.png" alt="NUVORA" />
+          <h4 class="slogan">
+            Soluções criativas.<br />
+            Resultados reais
+          </h4>
+        </div>
+        <div class="centro">
+          <nav>
+            <a href="#home">Home</a>
+            <a href="#servico">Serviço</a>
+            <a href="#sobrenos">Sobre nós</a>
+            <a href="#contato">Contato</a>
+          </nav>
+        </div>
+        <div class="direita">
+          <a href="mailto:nuvora.suporte@gmail.com" target="about_">E-mail</a>
+          <a
+            href="https://wa.me/5547984990311?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento!"
+            target="about_"
+            >WhatsApp</a
+          >
+          <div class="rdsociais">
+            <button class="redes">
+              <a href=""><img src="imgs/iconInsta.png" alt="Instagram" /></a>
+            </button>
+            <button class="redes">
+              <a href=""><img src="imgs/iconGithub.png" alt="GitHub" /></a>
+            </button>
+          </div>
+          <h4 class="slogan">Atendimento em todo o Brasil</h4>
+        </div>
+      </section>
+      <section>
+        <p>© 2025 NUVORA — Todos os direitos reservados</p>
+      </section>
+    </footer>
+    <a href="https://wa.me/5547984990311?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20serviços." 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Fale no WhatsApp">
+  <img src="imgs/iconWhats.png" alt="WhatsApp" />
+</a>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="particles.min.js"></script>
+  <script src="script.js"></script>
+</html>

@@ -1,0 +1,213 @@
+:root {
+  --bg: #f9fafb;
+  --text: #2e2e2e;
+  --menus: #7b7b7b;
+  --btn-pri: #4a90e2;
+  --hover: #1a56d1;
+  --btn-sec: #22c55e;
+}
+.titulo-servico {
+  font-family: "Inter", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--text), #4a90e2, #6b84c2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+@keyframes tela {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.titulo-servico.apareceu {
+  animation: tela 1s ease forwards;
+}
+.servico {
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f5f5f5 25%,
+    #f0f0f0 50%,
+    #f9f9f9 75%,
+    #ffffff 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientFlow 5s ease infinite;
+  padding: 0 0 7rem 0;
+  box-shadow: rgba(0, 0, 0, 0.125) 0px 18px 50px -10px;
+  position: relative;
+  z-index: 2;
+  border-radius: 28px 28px 0 0;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 55px;
+  gap: 100px;
+}
+.box {
+  position: relative;
+  padding: 2rem;
+  height: 500px;
+  background: #fff;
+  border-radius: 24px;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.box:before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  background: linear-gradient(135deg, #4a90e2, #5a9de0, #6bace2);
+  border-radius: 26px;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  padding: 6px;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    130deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.771) 50%,
+    transparent 70%
+  );
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.box:hover {
+  box-shadow: rgba(136, 165, 191, 0.6) 8px 4px 20px 0px,
+    rgba(255, 255, 255, 0.9) -6px -2px 18px 0px;
+  cursor: pointer;
+}
+.box:hover::after {
+  animation: shine 0.8s forwards;
+  opacity: 1;
+}
+
+@keyframes shine {
+  0% {
+    top: -100%;
+    left: -100%;
+  }
+  100% {
+    top: 100%;
+    left: 100%;
+  }
+}
+.box.apareceu {
+  animation: tela 1s ease forwards;
+  opacity: 1;
+  transform: translateY(0);
+}
+.site {
+  border-radius: 16px;
+  width: 150px;
+  height: auto;
+}
+.confere {
+  width: 15px;
+  height: auto;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+h5 {
+  color: var(--btn-pri);
+  font-weight: 600;
+}
+.preco {
+  font-size: 25px;
+  color: var(--text);
+  font-weight: 900;
+}
+.preco span {
+  font-size: 15px;
+  color: var(--menus);
+  font-weight: 600;
+}
+.box p {
+  font-weight: 200;
+  color: var(--text);
+}
+.selo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    var(--btn-pri),
+    var(--btn-pri),
+    var(--hover),
+    var(--btn-pri),
+    var(--btn-pri)
+  );
+  width: 120px;
+  height: 32px;
+  border-radius: 24px;
+  margin-top: 15px;
+  margin-left: 12px;
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+.selo p {
+  color: #ffff;
+  font-weight: 600;
+  font-size: 14px;
+}
+h6 {
+  color: var(--menus);
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 13px;
+}
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
